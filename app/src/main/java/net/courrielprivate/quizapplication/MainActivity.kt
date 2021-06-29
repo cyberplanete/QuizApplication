@@ -1,8 +1,10 @@
 package net.courrielprivate.quizapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import net.courrielprivate.quizapplication.databinding.ActivityMainBinding
+
 
 private lateinit var myBinding: ActivityMainBinding
 
@@ -11,5 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         myBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(myBinding.root)
+
+        //Retrait de la bar des notification - Mode FULLSCREEN
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
     }
 }

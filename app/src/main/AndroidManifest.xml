@@ -10,9 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApplication">
         <activity
+            android:name=".QuizQuestionActivity"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoActionBarTheme" android:windowSoftInputMode="adjustResize"> <!-- Permet un reajustment auto pour le clavier -->
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="adjustResize"> <!-- Permet un reajustment auto pour le clavier -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

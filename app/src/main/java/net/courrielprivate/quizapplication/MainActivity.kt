@@ -9,9 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import net.courrielprivate.quizapplication.databinding.ActivityMainBinding
 
 
-private lateinit var myBinding: ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var myBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         myBinding = ActivityMainBinding.inflate(layoutInflater)

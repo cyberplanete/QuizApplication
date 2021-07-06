@@ -40,7 +40,7 @@
             android:orientation="horizontal">
 
             <ProgressBar
-                android:id="@+id/progress_horizontal"
+                android:id="@+id/progressBar_horizontal"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

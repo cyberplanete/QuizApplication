@@ -2,11 +2,11 @@ package net.courrielprivate.quizapplication
 
 object Constante {
 
-    fun getQuestions(): ArrayList<Question> {
-        val questionsList = ArrayList<Question>()
-        val que1 = Question(
+    fun getQuestions(): ArrayList<QuestionModel> {
+        val questionsList = ArrayList<QuestionModel>()
+        val que1 = QuestionModel(
             1,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_argentina,
             "Argentine",
             "Belgique",
@@ -15,9 +15,9 @@ object Constante {
         )
         questionsList.add(que1)
 
-        val que2 = Question(
+        val que2 = QuestionModel(
             2,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_australia,
             "Bresil",
             "Angleterre",
@@ -26,9 +26,9 @@ object Constante {
         )
         questionsList.add(que2)
 
-        val que3 = Question(
+        val que3 = QuestionModel(
             3,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_belgium,
             "Afrique du sud",
             "Belgique",
@@ -37,9 +37,9 @@ object Constante {
         )
         questionsList.add(que3)
 
-        val que4 = Question(
+        val que4 = QuestionModel(
             4,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_brazil,
             "Argentine",
             "Cuba",
@@ -48,9 +48,9 @@ object Constante {
         )
         questionsList.add(que4)
 
-        val que5 = Question(
+        val que5 = QuestionModel(
             5,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_germany,
             "Mexique",
             "Malaisie",
@@ -59,9 +59,9 @@ object Constante {
         )
         questionsList.add(que5)
 
-        val que6 = Question(
+        val que6 = QuestionModel(
             6,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_india,
             "Autriche",
             "Kenya",
@@ -70,9 +70,9 @@ object Constante {
         )
         questionsList.add(que6)
 
-        val que7 = Question(
+        val que7 = QuestionModel(
             7,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_kuwait,
             "Laos",
             "Malte",
@@ -81,9 +81,9 @@ object Constante {
         )
         questionsList.add(que7)
 
-        val que8 = Question(
+        val que8 = QuestionModel(
             8,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_new_zealand,
             "Nigeria",
             "Nouvelle-Zélande",
@@ -92,9 +92,9 @@ object Constante {
         )
         questionsList.add(que8)
 
-        val que9 = Question(
+        val que9 = QuestionModel(
             9,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_denmark,
             "Danemark",
             "Estonie",
@@ -103,9 +103,9 @@ object Constante {
         )
         questionsList.add(que9)
 
-        val que10 = Question(
+        val que10 = QuestionModel(
             10,
-            "Quel est le nom du pays correspondant à cet drapeau",
+            "Quel est le nom du pays correspondant à ce drapeau ?",
             R.drawable.ic_flag_of_fiji,
             "Slovénie",
             "Tunisie",

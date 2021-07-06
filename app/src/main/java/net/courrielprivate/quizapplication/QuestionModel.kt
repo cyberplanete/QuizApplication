@@ -1,6 +1,6 @@
 package net.courrielprivate.quizapplication
 
-data class Question
+data class QuestionModel
     (
     val id: Int,
     val question: String,

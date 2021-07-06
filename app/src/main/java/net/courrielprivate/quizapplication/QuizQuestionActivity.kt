@@ -2,11 +2,10 @@ package net.courrielprivate.quizapplication
 
 import android.graphics.Color
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import net.courrielprivate.quizapplication.databinding.ActivityQuizQuestionBinding
 
@@ -15,21 +14,18 @@ private var mCurrentPosition: Int = 1
 private var mQuestionList: ArrayList<QuestionModel>? = null
 private var mSelectedOptionPosition: Int = 0
 
-class QuizQuestionActivity : AppCompatActivity(),View.OnClickListener {
-    private lateinit var myBinding: ActivityQuizQuestionBinding
+
+class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var myBinding1: ActivityQuizQuestionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val myBinding = ActivityQuizQuestionBinding.inflate(layoutInflater)
-        setContentView(myBinding.root)
+        myBinding1 = ActivityQuizQuestionBinding.inflate(layoutInflater)
+        setContentView(myBinding1.root)
 
         mQuestionList = Constante.getQuestions()
-        setQuestion()
 
-        myBinding.tvOptionOne.setOnClickListener { this }
-        myBinding.tvOptionTwo.setOnClickListener { this }
-        myBinding.tvOptionThree.setOnClickListener { this }
-        myBinding.tvOptionFour.setOnClickListener { this }
+        setQuestion()
     }
 
     private fun setQuestion() {
@@ -38,23 +34,24 @@ class QuizQuestionActivity : AppCompatActivity(),View.OnClickListener {
 
         defaultOptionsView()
 
-        myBinding.progressBarHorizontal.progress = mCurrentPosition
-        myBinding.tvProgress.text = "$mCurrentPosition" + "/" + myBinding.progressBarHorizontal.max
+        myBinding1.progressBarHorizontal.progress = mCurrentPosition
+        myBinding1.tvProgress.text =
+            "$mCurrentPosition" + "/" + myBinding1.progressBarHorizontal.max
 
-        myBinding.tvQuestion.text = question!!.question
-        myBinding.ivImage.setImageResource(question.image)
-        myBinding.tvOptionOne.text = question.optionOne
-        myBinding.tvOptionTwo.text = question.optionTwo
-        myBinding.tvOptionThree.text = question.optionThree
-        myBinding.tvOptionFour.text = question.optionFour
+        myBinding1.tvQuestion.text = question.question
+        myBinding1.ivImage.setImageResource(question.image)
+        myBinding1.tvOptionOne.text = question.optionOne
+        myBinding1.tvOptionTwo.text = question.optionTwo
+        myBinding1.tvOptionThree.text = question.optionThree
+        myBinding1.tvOptionFour.text = question.optionFour
     }
 
     private fun defaultOptionsView() {
         val options = ArrayList<TextView>()
-        options.add(0, myBinding.tvOptionOne)
-        options.add(1, myBinding.tvOptionTwo)
-        options.add(2, myBinding.tvOptionThree)
-        options.add(3, myBinding.tvOptionFour)
+        options.add(0, myBinding1.tvOptionOne)
+        options.add(1, myBinding1.tvOptionTwo)
+        options.add(2, myBinding1.tvOptionThree)
+        options.add(3, myBinding1.tvOptionFour)
 
         for (option in options) {
             option.setTextColor(Color.parseColor("#7a8089"))
@@ -66,19 +63,25 @@ class QuizQuestionActivity : AppCompatActivity(),View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when (v?.id)
-        {
-            R.id.tv_option_one ->{selectedOptionView(myBinding.tvOptionOne, selectedOptionNum = 1)}
-            R.id.tv_option_two ->{selectedOptionView(myBinding.tvOptionTwo, selectedOptionNum = 2)}
-            R.id.tv_option_three ->{selectedOptionView(myBinding.tvOptionThree, selectedOptionNum = 3)}
-            R.id.tv_option_four ->{selectedOptionView(myBinding.tvOptionFour, selectedOptionNum = 4)}
+        when (v?.id) {
+            R.id.tvOptionOne -> {
+                selectedOptionView(myBinding1.tvOptionOne, selectedOptionNum = 1)
+            }
+            R.id.tvOptionTwo -> {
+                selectedOptionView(myBinding1.tvOptionTwo, selectedOptionNum = 2)
+            }
+            R.id.tvOptionThree -> {
+                selectedOptionView(myBinding1.tvOptionThree, selectedOptionNum = 3)
+            }
+            R.id.tvOptionFour -> {
+                selectedOptionView(myBinding1.tvOptionFour, selectedOptionNum = 4)
+            }
 
 
         }
     }
 
-    private fun selectedOptionView(tv:TextView,selectedOptionNum: Int)
-    {// Reset des boutons
+    private fun selectedOptionView(tv: TextView, selectedOptionNum: Int) {// Reset des boutons
         defaultOptionsView()
         mSelectedOptionPosition = selectedOptionNum
         tv.setTextColor(Color.parseColor("#363a43"))

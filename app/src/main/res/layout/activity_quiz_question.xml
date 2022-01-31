@@ -63,7 +63,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tvOptionOne"
+            android:id="@+id/text_view_option_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -76,7 +76,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/tvOptionTwo"
+            android:id="@+id/text_view_option_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -89,7 +89,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/tvOptionThree"
+            android:id="@+id/text_view_option_three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -102,7 +102,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/tvOptionFour"
+            android:id="@+id/text_view_option_four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -123,7 +123,8 @@
             android:text="Valider"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:onClick="onClick"/>
 
     </LinearLayout>
 
